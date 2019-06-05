@@ -42,20 +42,24 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // Nav links assingment
-const navLinkServices = document.querySelector('nav a:nth-child(1)');
-const navLinkProduct = document.querySelector('nav a:nth-child(2)');
-const navLinkVision = document.querySelector('nav a:nth-child(3)');
-const navLinkFeatures = document.querySelector('nav a:nth-child(4)');
-const navLinkAbout = document.querySelector('nav a:nth-child(5)');
-const navLinkContact = document.querySelector('nav a:nth-child(6)');
+const navItem1 = document.querySelector('nav a:nth-child(1)');
+const navItem2 = document.querySelector('nav a:nth-child(2)');
+const navItem3 = document.querySelector('nav a:nth-child(3)');
+const navItem4 = document.querySelector('nav a:nth-child(4)');
+const navItem5 = document.querySelector('nav a:nth-child(5)');
+const navItem6 = document.querySelector('nav a:nth-child(6)');
 
 // Nav links manipulation
-navLinkServices.textContent = 'Services';
-navLinkProduct.textContent = 'Product';
-navLinkVision.textContent = 'Vision';
-navLinkFeatures.textContent = 'Features';
-navLinkAbout.textContent = 'About';
-navLinkContact.textContent = 'Contact';
+navItem1.textContent = siteContent.nav['nav-item-1'];
+navItem2.textContent = siteContent.nav['nav-item-2'];
+navItem3.textContent = siteContent.nav['nav-item-3'];
+navItem4.textContent = siteContent.nav['nav-item-4'];
+navItem5.textContent = siteContent.nav['nav-item-5'];
+navItem6.textContent = siteContent.nav['nav-item-6'];
 
 
+// CTA section
+const ctaH1 = document.querySelector('.cta-text h1');
+
+ctaH1.innerHTML = `${siteContent.cta.h1.slice(0, 3)}<br>${siteContent.cta.h1.slice(4, 6)}<br>${siteContent.cta.h1.slice(7, 14)}`;
 
