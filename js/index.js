@@ -54,3 +54,54 @@ for (let i = 0; i < navItemsArray.length - 1; i++) {
 const ctaH1 = document.querySelector('.cta-text h1');
 
 ctaH1.innerHTML = `${siteContent.cta.h1.slice(0, 3)}<br>${siteContent.cta.h1.slice(4, 6)}<br>${siteContent.cta.h1.slice(7, 14)}`;
+
+const ctaBtn = document.querySelector('.cta-text button');
+
+ctaBtn.textContent = siteContent.cta.button;
+
+const ctaImg = document.querySelector('#cta-img');
+
+ctaImg.src = siteContent.cta['img-src'];
+
+
+// Main Content Section
+
+const mainContentH4 = document.querySelectorAll('.text-content h4');
+const mainContentP = document.querySelectorAll('.text-content p');
+const middleImg = document.querySelector('.main-content img');
+
+mainContentH4[0].textContent = siteContent["main-content"]['features-h4'];
+mainContentH4[1].textContent = siteContent["main-content"]['about-h4'];
+mainContentH4[2].textContent = siteContent["main-content"]['services-h4'];
+mainContentH4[3].textContent = siteContent["main-content"]['product-h4'];
+mainContentH4[4].textContent = siteContent["main-content"]['vision-h4'];
+
+mainContentP[0].textContent = siteContent['main-content']['features-content'];
+mainContentP[1].textContent = siteContent['main-content']['about-content'];
+mainContentP[2].textContent = siteContent['main-content']['services-content'];
+mainContentP[3].textContent = siteContent['main-content']['product-content'];
+mainContentP[4].textContent = siteContent['main-content']['vision-content'];
+
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+
+// Contact Section
+
+const contactH4 = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
+
+contactH4.textContent = siteContent.contact['contact-h4'];
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+
+
+// Footer Section
+const footerP = document.querySelector('footer p');
+
+footerP.textContent = siteContent.footer.copyright;
+
+
+
+
+
