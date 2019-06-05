@@ -48,7 +48,25 @@ const navlinks = document.querySelectorAll('nav a');
 
 for (let i = 0; i < navItemsArray.length - 1; i++) {
   navlinks[i].textContent = navItemsArray[i];
+  
+  // Change color to nav links to green
+  navlinks[i].style.color = 'green';
 }
+
+// Prepend and append child elements to the nav links
+const append = document.createElement('a');
+const prepend = document.createElement('a');
+const nav = document.querySelector('nav');
+
+nav.appendChild(append);
+nav.prepend(prepend);
+
+append.textContent = 'Append';
+prepend.textContent = 'Prepend';
+append.style.color = 'green';
+prepend.style.color = 'green';
+
+
 
 // CTA section
 const ctaH1 = document.querySelector('.cta-text h1');
