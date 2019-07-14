@@ -23,8 +23,6 @@ const timer = () => {
             // When the msCount reaches ten we want the msHundredCountDown function to be called. This way
             // The ms in the hundreds place will increment by 1 for every 10 ms in the ones place
             msHundredsCountDown();
-
-            // clearInterval(countdown); // Will stop the countdown  
         }
     }, 10);
 
@@ -32,22 +30,22 @@ const timer = () => {
     const msHundredsCountDown = () => {
         msHundredsCount++;
         msHundredsNumber.textContent = msHundredsCount;
-        
-        
+
+
         if (msHundredsCount === 10) {
             msHundredsCount = 0;
             msHundredsNumber.textContent = msHundredsCount;
 
             secondOnesCountDown();
-            
+
         }
     };
 
     const secondOnesCountDown = () => {
         secondOnesCount++;
         secondOnesNumber.textContent = secondOnesCount;
-        
-        
+
+
         if (secondOnesCount === 10) {
             secondOnesCount = 0;
             secondOnesNumber.textContent = secondOnesCount;
@@ -60,7 +58,7 @@ const timer = () => {
     const secondTensCountDown = () => {
         secondTensCount++;
         secondTensNumber.textContent = secondTensCount;
-        
+
         if (secondTensCount === 1) {
             clearInterval(countdown);
             digitList.forEach(element => element.style.color = 'red');
@@ -68,3 +66,5 @@ const timer = () => {
     };
 
 };
+
+timer();
