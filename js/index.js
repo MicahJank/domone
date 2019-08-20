@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // Nav links
-navItemsArray = Object.values(siteContent.nav);
+const navItemsArray = Object.values(siteContent.nav);
 
 const navlinks = document.querySelectorAll('nav a');
 
